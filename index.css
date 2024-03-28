@@ -33,6 +33,10 @@ header ul li {
   }
 }
 
+header ul li a {
+  color: white;
+}
+
 .image-container {
   position: relative;
 }
@@ -87,6 +91,7 @@ header ul li {
   margin-left: 10%;
   margin-right: 10%;
   text-align: center;
+  text-shadow: 3px 3px 3px black;
   @media screen and (max-device-width: 480px) {
     font-size: 17px;
     margin-left: 0%;
@@ -275,13 +280,13 @@ header ul li {
   }
 }
 
-.card-avis div p{
+.card-avis div p {
   @media screen and (max-device-width: 480px) {
     margin: 10px;
   }
 }
 
-.card-avis-reverse div p{
+.card-avis-reverse div p {
   @media screen and (max-device-width: 480px) {
     margin: 10px;
   }
