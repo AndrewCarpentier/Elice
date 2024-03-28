@@ -1,0 +1,355 @@
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: rgb(238, 238, 238);
+}
+
+header {
+  height: 50px;
+  background-color: rgb(68, 68, 68);
+  color: white;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  @media screen and (max-device-width: 480px) {
+    justify-content: center;
+    align-items: start;
+    height: 145px;
+  }
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header ul li {
+  display: inline-block;
+  margin-right: 20px;
+  @media screen and (max-device-width: 480px) {
+    display: block;
+    padding: 10px;
+  }
+}
+
+.image-container {
+  position: relative;
+}
+
+#imgPrincipale {
+  width: 100%;
+  height: 500px;
+  @media screen and (max-device-width: 480px) {
+    --zoom: 1; /* control the zoom level */
+    /* the coordinate of the zoom */
+    --x: 50%;
+    --y: 50%;
+    /**/
+    transform: scale(var(--zoom));
+    clip-path: inset(
+      calc((1 - 1 / var(--zoom)) * (var(--y)))
+        calc((1 - 1 / var(--zoom)) * (100% - var(--x)))
+        calc((1 - 1 / var(--zoom)) * (100% - var(--y)))
+        calc((1 - 1 / var(--zoom)) * (var(--x)))
+    );
+  }
+}
+
+.image-container h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  z-index: inherit;
+  color: white;
+  text-align: center;
+  @media screen and (max-device-width: 480px) {
+    top: 20%;
+    font-size: 30px;
+  }
+}
+
+.image-container h1 span {
+  color: rgb(241, 196, 15);
+  font-weight: normal;
+}
+
+.image-container p {
+  position: absolute;
+  position: absolute;
+  font-size: 17px;
+  top: 47%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: rgb(226, 226, 226);
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  @media screen and (max-device-width: 480px) {
+    font-size: 17px;
+    margin-left: 0%;
+    margin-right: 0%;
+    left: 50%;
+    top: 65%;
+  }
+}
+
+.destination {
+  padding-top: 100px;
+  @media screen and (max-device-width: 480px) {
+    padding-top: 30px;
+  }
+}
+
+.destination h2 {
+  font-weight: normal;
+  margin-left: 10%;
+  font-size: 25px;
+  @media screen and (max-device-width: 480px) {
+    text-align: center;
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  @media screen and (max-device-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  margin: 2%;
+}
+
+.card img {
+  width: 300px;
+  max-height: 150px;
+}
+
+.card hr {
+  width: 10%;
+  border: 1px solid rgb(51, 51, 51);
+}
+
+.card p {
+  color: black;
+  display: flex;
+  font-size: small;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleCard {
+  margin-top: 30px;
+}
+
+.xp-container {
+  height: 370px;
+  width: 100%;
+  background-color: rgb(51, 51, 51);
+  margin-top: 100px;
+  display: flex;
+  @media screen and (max-device-width: 480px) {
+    flex-direction: column-reverse;
+    height: 100%;
+    font-size: 20px;
+  }
+}
+
+.xp-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 7%;
+}
+
+.xp-container div h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.xp-container div h2 span {
+  color: rgb(241, 196, 15);
+  font-weight: normal;
+}
+
+.xp-container div p {
+  color: white;
+}
+
+.avis-container {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.card-avis-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-avis-container h2 {
+  font-weight: normal;
+  margin-left: 10%;
+  font-size: 25px;
+}
+
+.card-avis {
+  width: 80%;
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  margin-top: 30px;
+  height: 200px;
+  @media screen and (max-device-width: 480px) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.card-avis-reverse {
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: white;
+  padding: 20px;
+  margin-top: 30px;
+  height: 200px;
+  @media screen and (max-device-width: 480px) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.card-avis p {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+}
+
+.card-avis-reverse p {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+}
+
+.card-avis div {
+  width: 10%;
+  margin-right: 2%;
+  @media screen and (max-device-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0%;
+  }
+}
+
+.card-avis-reverse div {
+  width: 10%;
+  margin-right: 2%;
+  @media screen and (max-device-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0%;
+  }
+}
+
+.card-avis div p{
+  @media screen and (max-device-width: 480px) {
+    margin: 10px;
+  }
+}
+
+.card-avis-reverse div p{
+  @media screen and (max-device-width: 480px) {
+    margin: 10px;
+  }
+}
+
+.card-avis div img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.card-avis-reverse div img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.contact-container {
+  height: 400px;
+  width: 100%;
+  background-color: rgb(51, 51, 51);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-container h2 {
+  color: white;
+  font-size: 25px;
+}
+
+.contact-container h2 span {
+  color: rgb(241, 196, 15);
+  font-size: 25px;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-container form input {
+  background-color: rgb(51, 51, 51);
+  border: none;
+  border-bottom: 1px solid rgb(84, 84, 84);
+  padding: 20px;
+  width: 300px;
+}
+
+.contact-container form button {
+  margin-top: 20px;
+  background-color: rgb(241, 196, 15);
+  border: none;
+  border-radius: 40px;
+  width: 120px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+footer {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(68, 68, 68);
+  color: white;
+}
