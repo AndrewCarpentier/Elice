@@ -11,17 +11,19 @@ header {
   background-color: rgb(68, 68, 68);
   color: white;
   display: flex;
-  justify-content: end;
   align-items: center;
+  justify-content: space-between;
   @media screen and (max-device-width: 480px) {
+    flex-direction: column;
     justify-content: center;
-    align-items: start;
-    height: 145px;
+    align-items: center;
+    height: 200px;
   }
 }
 
 header ul {
   list-style-type: none;
+  justify-content: end;
 }
 
 header ul li {
@@ -35,6 +37,17 @@ header ul li {
 
 header ul li a {
   color: white;
+}
+
+header .siteName{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+header .siteName i{
+  margin-right: 10px;
+  margin-left: 30px;
 }
 
 .image-container {
